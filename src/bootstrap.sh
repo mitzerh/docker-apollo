@@ -75,7 +75,10 @@ else
             mkdir -p /var/www/root
         fi
 
-        ln -s /usr/local/root/${root}/ /var/www/root/${root}
+        if [ ! -L "/var/www/root/${root}" ]; then
+            ln -s /usr/local/root/${root}/ /var/www/root/${root}
+        fi
+
     else
         echo "Error: /usr/local/root/${root} does not exist" >> $LOG
         exit 1;
