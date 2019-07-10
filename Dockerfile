@@ -51,11 +51,7 @@ RUN \
   yum install -y nodejs && \
   npm install -g grunt grunt-cli pm2
 
-RUN gem install \
-    sass \
-    json \
-    --no-document --no-user-install && \
-  echo Done!
+RUN echo Done!
 
 ############################################################
 # Install en_US.UTF-8 locale
