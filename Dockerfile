@@ -47,13 +47,12 @@ RUN \
 
 RUN \
   echo "installing node" && \
-  curl -sL https://rpm.nodesource.com/setup_6.x | bash - && \
+  curl -sL https://rpm.nodesource.com/setup_10.x | bash - && \
   yum install -y nodejs && \
   npm install -g grunt grunt-cli pm2
 
 RUN gem install \
     sass \
-    compass \
     json \
     --no-document --no-user-install && \
   echo Done!
